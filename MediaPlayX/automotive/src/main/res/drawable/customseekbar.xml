@@ -1,0 +1,30 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:gravity="center_vertical">
+        <shape android:shape="rectangle">
+            <solid
+                android:color="#FFFF"/>
+            <size android:height="50dp"/>
+            <corners android:radius="20dp"/>
+            <stroke android:color="@color/design_default_color_background"
+                android:width="3dp"/>
+        </shape>
+
+    </item>
+    <item android:gravity="center_vertical">
+        <scale android:scaleWidth="100%">
+            <selector>
+                <item>
+                    <shape android:shape="rectangle">
+                        <solid android:color="#846247"/>
+                        <size android:height="10dp"/>
+                        <corners android:radius="20dp"/>
+                    </shape>
+                </item>
+            </selector>
+        </scale>
+    </item>
+
+
+</layer-list>

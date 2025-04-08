@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/playbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.fragments.Playbarfragment">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+
+
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@id/top"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingRight="7dp"
+            android:paddingTop="7dp"
+            android:paddingLeft="7dp"
+            android:paddingBottom="7dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/middle"
+            app:layout_constraintHeight_percent="0.62"
+            android:background="@drawable/recyborder"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+
+                        app:cardBackgroundColor="@android:color/black"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/songimage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_launcher_foreground" />
+                    </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/middle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/tail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHeight_percent="0.16"
+            app:layout_constraintTop_toBottomOf="@+id/top">
+
+            <LinearLayout
+                android:id="@+id/m1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:gravity="end"
+                android:paddingRight="20dp"
+
+                android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/likebutton"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:background="@drawable/dislike" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/m2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+
+                android:orientation="horizontal">
+                        <SeekBar
+                            android:id="@+id/seek"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:progressTint="#E1DDDD"
+                            android:thumbTint="#923C38"
+
+
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/m3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/progreetime"
+
+                android:textColor="#FFFFFF"
+                android:text="0:0"
+                android:gravity="start"
+                android:fontFamily="sans-serif"
+                android:textSize="11dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textFontWeight="500"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/duratuon"
+
+                android:textColor="#FFFFFF"
+                android:gravity="end"
+                android:fontFamily="sans-serif"
+                android:textSize="11dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textFontWeight="500"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tail"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/middle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.2"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/playbackward"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:paddingLeft="15dp"
+                        android:src="@drawable/baseline_skip_previous_24" />
+
+                    <ImageView
+                        android:id="@+id/play"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.4"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:padding="1dp"
+                        android:src="@drawable/baseline_play_circle_24" />
+
+                    <ImageView
+                        android:id="@+id/playforward"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/baseline_skip_next_24" />
+                </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

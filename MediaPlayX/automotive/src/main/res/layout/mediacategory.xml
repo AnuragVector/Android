@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical"
+    android:outlineProvider="none"
+    android:id="@+id/data"
+    android:clickable="true"
+    android:focusable="true"
+
+
+
+    >
+
+    <TextView
+        android:id="@+id/textlistview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:outlineProvider="none"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/custom_font"
+        android:textSize="14sp"
+        android:textFontWeight="900"
+        android:paddingLeft="15dp"
+
+
+
+        />
+
+
+</LinearLayout>
